@@ -1,0 +1,35 @@
+Ok, entao o nosso objetivo e criar essa agenda. Muito simples, super easy, se tudo der certo melhor ainda. O que a gente vai buscar: criar uma tela em pe que corresponda 
+grosseiramente a tela ja existente do google calendar, para compromissos pontuais, e uma deitada que seja uma agenda rotineira de tretas da vida.
+
+Sobre a agenda rotineira:
+
+- Deve ter uma opcao de dividir o tempo dela em espacos de 2, 1 ou meia hora (talvez qualquer medida de tempo?)
+
+- Opcao de sono que fica bonitinho cinza e te permita guardar as horas de sono
+
+- Te dar notificacoes (rapidas?) das suas coisas
+
+- Ter uma forma simples de ja te deixar criar compromissos tipo em horarios regulares, indefinidamente.
+
+- Cores e breguetes brilhantes
+
+Sobre a agenda pontual:
+
+- Criar compromissos especificios para horarios especificos em dias especificos
+
+- Notificacoes mais longas? Tipo, se a agenda e rotineira vc n precisaria de avisos um dia antes, mas nessa seria melhor
+
+- Cores e brilho e pa
+
+As agendas devem ser integradas, entao a gente quer os seguintes ~features~:
+
+- Elas devem avisar quando vc marca compromissos em horarios conflitantes
+
+- Talvez um modo que nao te deixe marcar coisas quando vc vai dormir?
+
+- Talvez marcar quando vc dorme e acorda permitar fazer dela um despertador? :O (pensei nessa agora)
+
+- Permitir que compromissos conflitantes, ainda que conflitantes, possam ser integrados. Ou contidos em outros compromissos (ex: dia de prova faz parte de dia de aula) ou 
+substituindo com prioridades (ex: medico marcado em horario de trabalho)
+
+- Breguetes e brilhantes 
