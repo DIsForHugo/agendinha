@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 import { AddItemPage } from '../add-item/add-item'
+import { DetalheItemPage } from '../detalhe-item/detalhe-item';
  
 @Component({
   selector: 'page-home',
@@ -39,7 +40,9 @@ export class ListinhaPage {
   }
  
   viewItem(item){
- 
+    this.navCtrl.push(DetalheItemPage, {
+      item: item
+    });
   }
  
 }

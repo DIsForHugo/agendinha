@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ListinhaPage } from '../pages/listinha/listinha'
 import { AddItemPage } from '../pages/add-item/add-item'
+import { DetalheItemPage } from '../pages/detalhe-item/detalhe-item'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +21,8 @@ import { Calendar } from '@ionic-native/calendar';
     ListinhaPage,
     HomePage,
     TabsPage,
-    AddItemPage
+    AddItemPage,
+    DetalheItemPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { Calendar } from '@ionic-native/calendar';
     ListinhaPage,
     HomePage,
     TabsPage,
-    AddItemPage
+    AddItemPage,
+    DetalheItemPage
   ],
   providers: [
     StatusBar,
