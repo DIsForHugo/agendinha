@@ -7,7 +7,23 @@
 </ion-header>
  
 <ion-content>
- 
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-4 >
+      </ion-col>
+
+      <ion-col col-4 >
+        collumn12
+      </ion-col>
+      <ion-col col-4 >
+        oi
+      </ion-col>
+      <ion-col col-1>
+        collumn1
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-list>
     <ion-item *ngFor="let cal of calendars" tappable>
       <button ion-button icon-only item-start clear (click)="addEvent(cal)">
