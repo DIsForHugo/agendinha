@@ -14,6 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Calendar } from '@ionic-native/calendar';
 
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -42,7 +44,8 @@ import { Calendar } from '@ionic-native/calendar';
     StatusBar,
     SplashScreen,
     Calendar,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LocalNotifications
   ]
 })
 export class AppModule {}
