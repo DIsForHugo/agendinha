@@ -13,8 +13,10 @@ import { DetalheItemPage } from '../pages/detalhe-item/detalhe-item'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Calendar } from '@ionic-native/calendar';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Data } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +48,9 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     SplashScreen,
     Calendar,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LocalNotifications
+    LocalNotifications,
+    Data, 
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

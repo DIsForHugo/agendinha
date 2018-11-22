@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController, Platform, AlertController } from 'ionic-angular';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Storage } from '@ionic/storage';
 
  
 @Component({
@@ -15,7 +16,8 @@ export class AddItemPage {
     public view: ViewController, 
     public localNotifications: LocalNotifications,
     public platform: Platform,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,
+    private storage: Storage) {
     
   }
  
@@ -24,8 +26,10 @@ export class AddItemPage {
     let newItem = {
       title: this.data.title,
       description: this.data.description,
+      date: this.data.date,
+      time: this.data.time
     };
- 
+    this.storage.set(newItem.title, newItem);
     this.view.dismiss(newItem);
  
   }
@@ -38,6 +42,7 @@ export class AddItemPage {
        text: this.data.title,
        led: 'FF0000',
        sound: this.setSound(),
+       trigger: {at: date}
     });
     let alert = this.alertCtrl.create({
       title: 'Congratulation!',
@@ -45,7 +50,7 @@ export class AddItemPage {
       buttons: ['OK']
     });
     alert.present();
-    this.data = { title:'', description:'', date:'', time:'' };
+    //this.data = { title:'', description:'', date:'', time:'' };
 
     this.saveItem();
   }
