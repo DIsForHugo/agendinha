@@ -24,4 +24,8 @@ export class AboutPage {
     this.view.dismiss(horarioDeSono);
   }
 
+  submit() {
+    
+  }
+
 }
