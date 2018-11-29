@@ -6,9 +6,10 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ListinhaPage } from '../pages/listinha/listinha'
-import { AddItemPage } from '../pages/add-item/add-item'
-import { DetalheItemPage } from '../pages/detalhe-item/detalhe-item'
+import { ListinhaPage } from '../pages/listinha/listinha';
+import { AddItemPage } from '../pages/add-item/add-item';
+import { DetalheItemPage } from '../pages/detalhe-item/detalhe-item';
+import { SonoPage } from '../pages/sono/sono';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { Data } from '../providers/data/data';
     HomePage,
     TabsPage,
     AddItemPage,
-    DetalheItemPage
+    DetalheItemPage,
+    SonoPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { Data } from '../providers/data/data';
     HomePage,
     TabsPage,
     AddItemPage,
-    DetalheItemPage
+    DetalheItemPage,
+    SonoPage
   ],
   providers: [
     StatusBar,

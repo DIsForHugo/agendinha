@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController } from 'ionic-angular';
+import { ModalController, NavController, ViewController, AlertController } from 'ionic-angular';
+import { Storage } from '@ionic/storage'
+//import { Data } from '../../providers/data/data'
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
+
 export class AboutPage {
 
   sono = {dormir: '', acordar: ''}
 
-  constructor(public navCtrl: NavController,
+  constructor(public modalCtrl: ModalController,
+    public navCtrl: NavController,
     public view: ViewController,
-    private storage: Storage) {
+    private storage: Storage,
+    public alertCtrl: AlertController) {
+
+  }
+
+  ionViewDidLoad() {
 
   }
 
@@ -25,6 +34,13 @@ export class AboutPage {
   }
 
   submit() {
+    this.saveItem()
+    let alert = this.alertCtrl.create({
+      title: 'Parabéns!',
+      subTitle: 'Seu horário de sono foi definido',
+      buttons: ['OK']
+    });
+    alert.present();
     
   }
 

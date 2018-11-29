@@ -11,6 +11,7 @@ import { Storage } from '@ionic/storage';
 export class AddItemPage {
  
   data = { title:'', description:'', date:'', time:'' };
+  horarioDeSono = {dormir: '', acordar: ''}
 
   constructor(public navCtrl: NavController, 
     public view: ViewController, 
@@ -37,6 +38,7 @@ export class AddItemPage {
   submit() {
     console.log(this.data);
     var date = new Date(this.data.date+" "+this.data.time);
+    this.checkTime(this.data.time);
     console.log(date);
     this.localNotifications.schedule({
        text: this.data.title,
@@ -62,7 +64,13 @@ export class AddItemPage {
       return 'file://assets/sounds/Rooster.caf'
     }
   }
- 
+  
+  checkTime(hora) {
+    //this.horarioDeSono = this.storage.get("Meu Sono")
+    //if (hora > horarioDeSono.dormir || )
+    return true
+  }
+
   close(){
     this.view.dismiss();
   }
