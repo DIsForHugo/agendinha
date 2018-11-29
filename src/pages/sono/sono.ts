@@ -17,11 +17,24 @@ export class SonoPage {
 
   data = {dormir: '', acordar: ''}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad SonoPage');
+    console.log('ionViewDidLoad SonoPage');
+  }
+
+  submit() {
+    this.saveItem()
+    let alert = this.alertCtrl.create({
+      title: 'Parabéns!',
+      subTitle: 'Seu horário de sono foi definido',
+      buttons: ['OK']
+    });
+    alert.present();
+    
   }
 
 }
