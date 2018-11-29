@@ -1,11 +1,30 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-      About
+      Add Item
     </ion-title>
-  </ion-navbar>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content padding>
-	teste
+  <p> Escolha um horário de sono! Durante esse horário, você não poderá marcar coisas para fazer 
+    nem receber notificações do aplicativo!</p>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Hora de dormir</ion-label>
+      <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="data.dormir" name="dormir"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Hora de acordar</ion-label>
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="data.acordar" name="acordar"></ion-datetime>
+      </ion-item>
+  </ion-list>
+ 
+  <button full ion-button color="secondary" (click)="submit()">Save</button>
+ 
 </ion-content>
